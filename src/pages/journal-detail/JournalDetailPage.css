@@ -1,0 +1,185 @@
+.journal-detail {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: var(--spacing-6);
+}
+
+.journal-detail__header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
+  margin-bottom: var(--spacing-6);
+}
+
+.journal-detail__title-block {
+  flex: 1;
+}
+
+.journal-detail__title {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+}
+
+.journal-detail__description {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+.journal-detail__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6);
+}
+
+.journal-detail__section-title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--spacing-4);
+}
+
+.journal-detail__trades {
+  margin-top: var(--spacing-4);
+}
+
+.trade-detail {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.trade-detail__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: var(--spacing-3);
+  padding: var(--spacing-4);
+  background-color: var(--color-bg-tertiary);
+  border-radius: var(--radius-md);
+}
+
+.trade-detail__section {
+  padding: var(--spacing-4);
+  background-color: var(--color-bg-tertiary);
+  border-radius: var(--radius-md);
+}
+
+.trade-detail__section h3 {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--spacing-2);
+  color: var(--color-text-secondary);
+}
+
+.trade-detail__criteria {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.trade-detail__criteria li {
+  padding: var(--spacing-2);
+  background-color: var(--color-bg-secondary);
+  border-radius: var(--radius-sm);
+}
+
+.journal-detail__loader,
+.journal-detail__not-found {
+  padding: var(--spacing-12);
+  text-align: center;
+}
+
+.trade-detail__gallery {
+  margin-bottom: var(--spacing-4);
+}
+
+.trade-detail__gallery h3 {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--spacing-3);
+  color: var(--color-text-secondary);
+}
+
+.trade-detail__gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: var(--spacing-3);
+}
+
+.trade-detail__gallery-item {
+  aspect-ratio: 16/9;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid var(--color-border-primary);
+  transition: transform var(--transition-fast);
+}
+
+.trade-detail__gallery-item:hover {
+  transform: scale(1.02);
+  border-color: var(--color-accent-primary);
+}
+
+.trade-detail__gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ... существующие стили ... */
+
+.trade-detail__gallery {
+  margin-bottom: var(--spacing-4);
+}
+
+.trade-detail__gallery h3 {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--spacing-3);
+  color: var(--color-text-secondary);
+}
+
+.trade-detail__gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: var(--spacing-3);
+}
+
+.trade-detail__gallery-item {
+  aspect-ratio: 16/9;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid var(--color-border-primary);
+  transition: all var(--transition-fast);
+  position: relative;
+}
+
+.trade-detail__gallery-item::after {
+  content: '🔍';
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-2xl);
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.trade-detail__gallery-item:hover {
+  transform: scale(1.02);
+  border-color: var(--color-accent-primary);
+}
+
+.trade-detail__gallery-item:hover::after {
+  opacity: 1;
+}
+
+.trade-detail__gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ... остальное ... */

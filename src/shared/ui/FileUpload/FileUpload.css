@@ -1,0 +1,78 @@
+/* ... существующие стили ... */
+
+.file-upload__gallery {
+  margin-top: var(--spacing-4);
+}
+
+.file-upload__gallery-title {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-2);
+}
+
+.file-upload__thumbnails {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: var(--spacing-2);
+}
+
+.file-upload__thumbnail {
+  position: relative;
+  aspect-ratio: 1;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--color-border-primary);
+  background-color: var(--color-bg-primary);
+}
+
+.file-upload__thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.file-upload__thumbnail-remove {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-loss);
+  color: white;
+  border: none;
+  font-size: var(--font-size-lg);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all var(--transition-fast);
+}
+
+.file-upload__thumbnail:hover .file-upload__thumbnail-remove {
+  opacity: 1;
+}
+
+.file-upload__thumbnail-name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--spacing-1);
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  font-size: var(--font-size-xs);
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.file-upload__gallery--existing .file-upload__thumbnail {
+  border-color: var(--color-accent-primary);
+}
+
+.file-upload__gallery--new .file-upload__thumbnail {
+  border-color: var(--color-profit);
+}

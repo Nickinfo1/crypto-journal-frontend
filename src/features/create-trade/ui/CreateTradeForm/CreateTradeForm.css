@@ -1,0 +1,114 @@
+.trade-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.trade-form__grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.trade-form__row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-4);
+}
+
+.trade-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+}
+
+.trade-form__toggle {
+  display: flex;
+  gap: var(--spacing-2);
+}
+
+.toggle-btn {
+  flex: 1;
+  padding: var(--spacing-2) var(--spacing-4);
+  background-color: var(--color-bg-tertiary);
+  border: 1px solid var(--color-border-primary);
+  border-radius: var(--radius-md);
+  color: var(--color-text-secondary);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.toggle-btn--active.toggle-btn--long {
+  background-color: var(--color-profit-bg);
+  border-color: var(--color-profit);
+  color: var(--color-profit);
+}
+
+.toggle-btn--active.toggle-btn--short {
+  background-color: var(--color-loss-bg);
+  border-color: var(--color-loss);
+  color: var(--color-loss);
+}
+
+.trade-form__pnl-preview {
+  padding: var(--spacing-3);
+  background-color: var(--color-bg-tertiary);
+  border-radius: var(--radius-md);
+  font-family: var(--font-family-mono);
+  font-weight: var(--font-weight-semibold);
+  text-align: center;
+}
+
+.trade-form__textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.trade-form__criteria-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-2);
+}
+
+.trade-form__criteria-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.trade-form__criteria-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr auto;
+  gap: var(--spacing-2);
+  align-items: center;
+}
+
+.trade-form__remove-btn {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-bg-tertiary);
+  border: 1px solid var(--color-border-primary);
+  border-radius: var(--radius-md);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.trade-form__remove-btn:hover {
+  background-color: var(--color-loss-bg);
+  color: var(--color-loss);
+  border-color: var(--color-loss);
+}
+
+.trade-form__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--spacing-3);
+  padding-top: var(--spacing-4);
+  border-top: 1px solid var(--color-border-primary);
+}
