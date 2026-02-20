@@ -276,3 +276,35 @@ frontend/
 }
 ```
 
+---
+
+## 🧪 Тестирование
+
+### Unit тесты
+```bash
+npm run test
+```
+
+### E2E тесты
+```bash
+npm run test:e2e
+```
+
+### Пример теста
+```typescript
+// src/entities/trade/hooks/__tests__/useTrades.test.ts
+
+import { renderHook, waitFor } from '@testing-library/react';
+import { useTrades } from '../useTrades';
+
+describe('useTrades', () => {
+  it('should fetch trades', async () => {
+    const { result } = renderHook(() => useTrades('journal-id'));
+    
+    await waitFor(() => {
+      expect(result.current.isSuccess).toBe(true);
+    });
+  });
+});
+```
+
